@@ -20,5 +20,15 @@ dic = {"1":"liao", "2":"mi"}
 test(n=dic)
 test(**dic) #相当于将dic里的元素直接赋值给args
 
+##########################################################
+
+# 万能参数
+def all(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+all(1, 2, 3, k1="1", k2="2")   # 元素1，2，3放入args，元素k1="1", k2="2"放入kwargs    
+
+
 
 
