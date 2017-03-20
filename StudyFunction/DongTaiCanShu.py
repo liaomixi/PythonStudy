@@ -23,11 +23,11 @@ test(**dic) #相当于将dic里的元素直接赋值给args
 ##########################################################
 
 # 万能参数
-def all(*args, **kwargs):
+def all(*args, **kwargs):   # 两个 * 的形参只能放最后
     print(args)
     print(kwargs)
 
-all(1, 2, 3, k1="1", k2="2")   # 元素1，2，3放入args，元素k1="1", k2="2"放入kwargs    
+all(1, 2, 3, k1="1", k2="2")   # 元素1，2，3放入args，元素k1="1", k2="2"放入kwargs
 
 
 
