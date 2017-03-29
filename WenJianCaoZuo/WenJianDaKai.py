@@ -7,14 +7,25 @@
 # f = open("test01", "x") # 文件存在就报错，不存在就创建并写文件，python3里面新加功能
 
 # 以字节方式读写文件
-f = open("test01", "ab")
-f.write(bytes("liaomixi", encoding="utf8"))
+# f = open("test01", "ab")
+# f.write(bytes("liaomixi", encoding="utf8"))
+# f.close()
+#
+# f = open("test01", "rb")
+# data = f.read()
+# print(str(data, encoding="utf8"))
+# f.close()
+
+f = open("test01", "r+")
+f.read(2)    # 2代表读2个字符，文件指针往后移2位，从0开始
+print(f.tell())    # 输出为2
+
+f.seek(f.tell())
+f.write("4")
+f.seek(0)   # 重新将指针调整到文件开始处，以实现读取文件全部内容
+print(f.read())
 f.close()
 
-f = open("test01", "rb")
-data = f.read()
-print(str(data, encoding="utf8"))
-f.close()
 
 ############################
 # 操作文件
