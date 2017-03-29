@@ -6,7 +6,7 @@
 # f = open("test01", "ab") # 追加写，以字节的方式
 # f = open("test01", "x") # 文件存在就报错，不存在就创建并写文件，python3里面新加功能
 
-## 以字节方式读写文件
+# 以字节方式读写文件
 f = open("test01", "ab")
 f.write(bytes("liaomixi", encoding="utf8"))
 f.close()
