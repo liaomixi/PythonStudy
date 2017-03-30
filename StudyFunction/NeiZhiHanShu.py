@@ -104,7 +104,11 @@ def f1(a):
 ret = filter(f1, [11, 33, 22, 44])
 print(list(ret))  # 输出 [33, 44]
 
+# 等价于
 
+f1 = lambda a: a > 22
+ret = filter(f1, [11, 33, 22, 44])
+print(list(ret))
 
 
 

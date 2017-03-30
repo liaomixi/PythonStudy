@@ -46,7 +46,7 @@ def f1(a1):
 
 # 函数功能等价于
 
-f2 = lambda a1: a1 + 100  # 这个就是 lambda 表达式
+f2 = lambda a1: a1 + 100  # 这个就是 lambda 表达式，lambda 表达式会默认返回表达式执行结果
 
 ret1 = f1(10)
 print(ret1)
