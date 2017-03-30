@@ -64,10 +64,10 @@ s = "print(1234)"
 # 编译
 r = compile(s, "<string>", "exec")  # 几种编译模式，exec，eval， single
 
-# 执行python代码，没有返回值
+# exec() 执行python代码，没有返回值
 exec(r)
-exec("print(10+10)")  # 不编译，直接执行也可以
 
+# 不编译，直接执行也可以
 li = ["1", "2", "3"]
 s = "+".join(li)  # 将li转换为字符串 "1+2+3"
 ss = "print(%s)" % (s,)
