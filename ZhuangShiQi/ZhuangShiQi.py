@@ -11,7 +11,12 @@ def outer(fun):       # fun就等于show
 
 @outer
 def show():
-    print("ok")
+    print("show()")
+
+@outer
+def test():
+    print("test()")
 
 
 show()  # 这里执行show()就相当于执行 inner() 函数
+test()
