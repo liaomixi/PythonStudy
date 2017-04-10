@@ -1,7 +1,9 @@
 def outer(fun):       # fun就等于show
     def inner():
-        print("1")
+        print("before")
         fun()         # 这里就是执行 show() 函数内的语句
+        print("after")
+
     return inner
 
 # @ + 函数，装饰器
