@@ -1,4 +1,4 @@
-def outer(fun):       # fun就等于show
+def outer(fun):       # fun就等于 show 或 test
     def inner(*args, **kwargs):
         print("before")
         ret = fun(*args, **kwargs)         # 这里就是执行 show() 函数内的语句，并处理原函数返回值
