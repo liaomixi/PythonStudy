@@ -1,8 +1,9 @@
 def outer(fun):       # fun就等于show
-    def inner():
+    def inner(*args, **kwargs):
         print("before")
-        fun()         # 这里就是执行 show() 函数内的语句
+        ret = fun(*args, **kwargs)         # 这里就是执行 show() 函数内的语句，并处理原函数返回值
         print("after")
+        return ret
 
     return inner
 
@@ -12,13 +13,16 @@ def outer(fun):       # fun就等于show
 # 2。将outer函数的返回值，重新赋值给show，这里就是 show = inner，相当show函数变成了inner，后面再调用show函数就是调用inner函数了
 
 @outer
-def show():
+def show(arg = None):
     print("show()")
+    return arg
 
 @outer
-def test():
+def test(arg = None):
     print("test()")
+    return arg
 
 
-show()  # 这里执行show()就相当于执行 inner() 函数
-test()
+print(show("SSSS"))  # 这里执行show()就相当于执行 inner() 函数
+print()
+print(test("TTTT"))
