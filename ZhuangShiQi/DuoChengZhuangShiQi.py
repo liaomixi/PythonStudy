@@ -23,7 +23,7 @@ def check_admin(func):
 def login():
     print("登录成功！")
 
-@check_login
+@check_login     #  这个时候 check_login 装饰器里的 func 代表的是 check_admin 装饰器里的 inner，check_admin 装饰器里的 inner 代表的是 admin 函数
 @check_admin
 def admin():
     print("欢迎管理员!")
