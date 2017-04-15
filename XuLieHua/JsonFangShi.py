@@ -1,3 +1,5 @@
+# json只能支持基本数据类型序列化
+
 import json
 
 dic1 = {'k1':123}
