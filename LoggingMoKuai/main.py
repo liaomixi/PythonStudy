@@ -31,7 +31,7 @@ LOGGER.addHandler(handler1)
 LOGGER.addHandler(handler2)
 
 # 封装成函数供外面模块使用
-def Mlog(type, message):
+def mLog(type, message):
     if type == "error":
         LOGGER.error(message)
     elif type == "critical":
