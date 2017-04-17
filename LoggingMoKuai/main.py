@@ -11,8 +11,8 @@ import logging
 # 同时把log日志打到标准输出和文件里
 
 # 首先创建logger对象, 这个logger对象最好是一个全局变量，整个程序都可以用
-logger = logging.getLogger("TEST-LOG")
-logger.setLevel(logging.WARNING)
+LOGGER = logging.getLogger("TEST-LOG")
+LOGGER.setLevel(logging.WARNING)
 
 # 创建handler1对象，主要处理输出到标准输出(屏幕)
 handler1 = logging.StreamHandler()
@@ -27,11 +27,21 @@ formatter = logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s")
 handler1.setFormatter(formatter)
 handler2.setFormatter(formatter)
 
-logger.addHandler(handler1)
-logger.addHandler(handler2)
+LOGGER.addHandler(handler1)
+LOGGER.addHandler(handler2)
 
-logger.warning("liao mi xi")
-logger.critical("liao mi xi")
-logger.error("liao mi xi")
+# 封装成函数供外面模块使用
+def Mlog(type, message):
+    if type == "error":
+        LOGGER.error(message)
+    elif type == "critical":
+        LOGGER.critical(message)
+    elif type == "warning":
+        LOGGER.warning(message)
+    elif type == "info":
+        LOGGER.info(message)
+    elif type == "debug":
+        LOGGER.debug(message)
+
 
 
