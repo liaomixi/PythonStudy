@@ -8,6 +8,6 @@ logging.critical("[critical] liao mi xi")
 logging.error("[error] liao mi xi")
 
 
-
+# 同时把log打到标准输出和文件里
 
 
