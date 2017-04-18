@@ -20,5 +20,3 @@ def view_bar(num, sum):
 #         time.sleep(1)
 #         view_bar(i, 100)
 
-
-
