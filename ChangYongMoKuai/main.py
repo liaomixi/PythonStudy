@@ -15,11 +15,10 @@ def view_bar(num, sum):
     sys.stdout.write(r)          # 输出 r 不自动换行，print() 会自动换行
     sys.stdout.flush()
 
-if __name__ == '__main__':
-    for i in range(101):
-        time.sleep(1)
-        view_bar(i, 100)
-
+# if __name__ == '__main__':
+#     for i in range(101):
+#         time.sleep(1)
+#         view_bar(i, 100)
 
 
 
