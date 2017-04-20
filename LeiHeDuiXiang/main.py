@@ -6,16 +6,24 @@
 
 class Test:
     def __init__(self, name, age):
-        self.name = name
-        self.age = age
+        self.n = name
+        self.a = age
 
     def show(self):
-        print(self.name, self.age)
+        print(self.n, self.a)
 
-o1 = Test("liaomixi", "18")
+
+# 继承
+class Te(Test):
+    def __init__(self):
+        super(Te, self).__init__("liaomixi", 18)   # 调用父类构造方法
+
+    def show(self):
+        super(Te, self).show()   # 执行父类的show方法。或 Test.show(self)
+
+        print("Te show")
+
+
+o1 = Te()
 o1.show()
 
-print()
-
-o2 = Test("mixi", "20")
-o2.show()
