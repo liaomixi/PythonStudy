@@ -10,7 +10,7 @@ class Test:
         self.a = age
 
     def show(self):
-        print(self.n, self.a)
+        print("Test.show")
 
 
 # 继承
@@ -21,15 +21,18 @@ class Te(Test):
     # 重写父类中的 show 方法
     def show(self):
         super(Te, self).show()   # 执行父类的show方法。或 Test.show(self)
-        print("Te show")
+        print("Te.show")
 
     def test(self):
-        print("Te test")
+        print("Te.test")
 
 
+# 多重继承，如果父类内有同名方法，就会从左往右找，一条道走到黑。如果多个父类有共同的基类，最后才会到基类里面去找
+class Tt(Te, Test):
+    pass
 
-o1 = Te()
-o1.show()
+tt = Tt()
+tt.show()
 
 
 
