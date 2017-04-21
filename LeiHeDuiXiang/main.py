@@ -12,6 +12,9 @@ class Test:
     def show(self):
         print("Test.show")
 
+    def my(self):
+        print("Test.my")
+
 
 # 继承
 class Te(Test):
@@ -22,12 +25,14 @@ class Te(Test):
     def show(self):
         super(Te, self).show()   # 执行父类的show方法。或 Test.show(self)
         print("Te.show")
+        self.my()  # 现在 Test , Te , Tt 三个类中都有 my() 方法，但是这里的self就是 Tt 类的 tt 对象，因此调用时会先到Tt类里去找my()方法，找的规则就是下面写的
 
-    def test(self):
-        print("Te.test")
+    def my(self):
+        print("Te.my")
 
 
 # 多重继承，如果父类内有同名方法，就会从左往右找，一条道走到黑。如果多个父类有共同的基类，最后才会到基类里面去找
+# __init__() 方法也是像上面这样处理
 class Tt(Te, Test):
     pass
 
