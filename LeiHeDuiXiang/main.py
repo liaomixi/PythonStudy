@@ -34,10 +34,13 @@ class Te(Test):
 # 多重继承，如果父类内有同名方法，就会从左往右找，一条道走到黑。如果多个父类有共同的基类，最后才会到基类里面去找
 # __init__() 方法也是像上面这样处理
 class Tt(Te, Test):
+    css = "中国"      # 静态字段，属于内，通过 Tt.css 访问
+
+    def __init__(self, name):
+        self.n = name   # 普通字段，属于对象
     pass
 
 tt = Tt()
 tt.show()
-
 
 
