@@ -38,9 +38,13 @@ class Tt(Te, Test):
 
     def __init__(self, name):
         self.n = name   # 普通字段，属于对象
-    pass
+
+    # 静态方法，可以不要self
+    @staticmethod
+    def static_method():
+        print("this is static method.")
 
 tt = Tt()
 tt.show()
-
+Tt.static_method()
 
