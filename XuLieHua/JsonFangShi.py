@@ -2,7 +2,8 @@
 
 import json
 
-dic1 = {'k1':123}
+# 创建字典
+dic1 = {'k1': 123}
 
 print(dic1, type(dic1))
 
