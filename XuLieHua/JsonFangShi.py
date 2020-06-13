@@ -2,7 +2,7 @@
 
 import json
 
-# 创建字典吧
+# 字典
 dic1 = {'k1': 123}
 
 print(dic1, type(dic1))
