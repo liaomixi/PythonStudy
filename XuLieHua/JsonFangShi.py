@@ -3,6 +3,7 @@
 import json
 
 # 1次
+# 4次
 dic1 = {'k1':123}
 
 print(dic1, type(dic1))
