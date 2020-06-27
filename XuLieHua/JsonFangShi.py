@@ -4,7 +4,7 @@ import json
 
 # 1次
 # 4次
-dic1 = {'k1':123}
+dic1 = {'k1': 123}
 
 print(dic1, type(dic1))
 
@@ -17,3 +17,4 @@ print(res, type(res))
 dic1 = json.loads(res)
 
 print(dic1, type(dic1))
+print(dic1['k1'])
