@@ -1,2 +1,2 @@
 print("hello word")
-print(1)
+print("%s%s" % ("1", "liao"))
