@@ -14,6 +14,17 @@ print(s[2:4])
 print(s[:4])
 
 # 获取字符串从位置4开始至字符串末尾之间的字符串，包括开头，包括结尾
-print(s[4:])
+d = 4
+print(s[d:])
 
+y = "py"
+if y in s:
+    print(y)
 
+print(len(y))
+
+if y != s:
+    print(y)
+
+if y == s:
+    print("yes")
