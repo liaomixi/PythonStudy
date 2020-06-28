@@ -14,3 +14,7 @@ lst = [1, 2, 3]
 #列表反转 [1, 2, 3] 变为 [3, 2, 1]
 print(lst[::-1])
 
+#反转字符串
+s = "liao"
+print("".join(list(reversed(s))))
+
