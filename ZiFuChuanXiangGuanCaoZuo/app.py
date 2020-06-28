@@ -28,3 +28,10 @@ if y != s:
 
 if y == s:
     print("yes")
+
+s = "liao mi xi "
+print(s.strip())  # 去掉字符串前后空格
+print(s.split(" "))  # 使用空格分隔字符串，获得1个列表
+
+s = ["liao", "mi", "xi"]
+print(".".join(s))  # 使用 句号(.) 连接字符串
