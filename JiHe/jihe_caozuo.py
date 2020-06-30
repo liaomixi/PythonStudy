@@ -21,3 +21,5 @@ a = set([1, 2, 3])
 b = set([3, 4])
 d = a.symmetric_difference(b) # d为a和b合在一起后去掉重复元素后剩余的部分
 print(d)
+
+#test
