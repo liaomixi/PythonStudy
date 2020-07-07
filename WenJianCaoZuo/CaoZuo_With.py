@@ -13,9 +13,9 @@
 
 # with 同时打开多个文件，python2.7 之后才开始支持
 
-with open("test01", "r", encoding="utf8") as f1, open("test02", "w", encoding="utf8") as f2:
+with open("test01", "r+", encoding="utf8") as f1, open("test02", "r+", encoding="utf8") as f2:
     for line in f1:
-        new_line = line.replace("liao", "chen")
+        new_line = line.replace("liao", "chengg")
         f2.write(new_line)
 
 ##############################################################################################################
